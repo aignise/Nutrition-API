@@ -1,4 +1,4 @@
-# Recipe Search App
+# Nutrition-Recipe Search App
 
 The Recipe Search App is a Flask-based web application that allows users to search for recipes based on various criteria such as dietary preferences, ingredients, and nutritional information. It utilizes the Spoonacular API to fetch recipe data and provide users with relevant recipes.
 
