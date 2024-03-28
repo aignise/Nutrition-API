@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Search Results</title>
+</head>
+<body>
+    <h1>Recipe Search Results</h1>
+    <ul>
+        {% for recipe in recipes %}
+        <li>
+            <img src="{{ recipe.image }}" alt="Recipe Image" width="150">
+            <h2>{{ recipe.title }}</h2>
+            <ul>
+                {% for recipe in recipes %}
+                <li>
+                    <h2>{{ recipe.title }}</h2>
+                    <!-- Other recipe details -->
+                    <h3>Nutrition Information:</h3>
+                    <ul>
+                        {% for nutrient in recipe.nutrition.nutrients %}
+                        <li>{{ nutrient.name }}: {{ nutrient.amount }} {{ nutrient.unit }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+                {% endfor %}
+            </ul>
+           
+            <p><strong>Summary:</strong> {{ recipe.summary|striptags }}</p>
+            <!-- You can add more nutrition-related information as needed -->
+        </li>
+        {% endfor %}
+
+    </ul>
+    
+    
+</body>
+</html>
