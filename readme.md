@@ -2,6 +2,36 @@
 
 The Recipe Search App is a Flask-based web application that allows users to search for recipes based on various criteria such as dietary preferences, ingredients, and nutritional information. It utilizes the Spoonacular API to fetch recipe data and provide users with relevant recipes.
 
+# Fetch Recipes Function
+
+This Python function `fetch_recipes` utilizes the Spoonacular API to fetch recipes based on various parameters such as query, dietary preferences, and nutritional requirements.
+
+## Parameters
+
+- `query`: The search query for recipes.
+- `diet`: Dietary preference for the recipes (e.g., vegetarian, vegan, etc.). Defaults to an empty string.
+- `intolerances`: Intolerances for the recipes (e.g., dairy, gluten, etc.). Defaults to an empty string.
+- `maxCarbs`: Maximum allowed carbs in grams. Defaults to an empty string.
+- `minProtein`: Minimum required protein in grams. Defaults to an empty string.
+- `maxFat`: Maximum allowed fat in grams. Defaults to an empty string.
+- `maxReadyTime`: Maximum ready time for the recipes in minutes. Defaults to an empty string.
+
+## Returns
+
+The function returns a JSON response containing the fetched recipes.
+
+# Main Program
+
+This Python script `main.py` interacts with the user to fetch recipes based on their preferences using the `fetch_recipes` function.
+
+## Steps to Run
+
+1. Set up a virtual environment and install the required dependencies (`dotenv`, `requests`).
+2. Obtain an API key from Spoonacular and set it in the `.env` file.
+3. Execute the `main.py` script.
+4. Enter the recipe query and other preferences as prompted.
+5. The script will fetch and display the recipes based on the provided preferences.
+
 ## Getting Started
 
 These instructions will help you set up the project on your local machine for development and testing purposes.
