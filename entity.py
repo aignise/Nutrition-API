@@ -12,7 +12,7 @@ def setup():
     assistant = client.beta.assistants.create(
         name="Recipe Search Assistant",
         instructions="You are a bot to search for recipes based on user input.",
-        model="gpt-4-turbo-preview",
+        model="gpt-3.5-turbo-0125",
         tools=[
             {
                 "type": "function",
